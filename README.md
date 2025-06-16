@@ -10,35 +10,14 @@ This repository contains a pipeline for predicting Polycystic Ovary Syndrome (PC
 - **ML Models**: Random Forest, Logistic Regression, SVM, Decision Tree.
 - **Outcome**: Best model achieved **83.5% accuracy**, demonstrating strong diagnostic potential.
 
-## 📂 Repository Structure
-
-├── data/
-│ └── raw_data.csv # raw dataset (anonymized)
-├── notebooks/
-│ ├── EDA.ipynb # exploratory data analysis
-│ └── Model_Training.ipynb# prototyping models
-├── src/
-│ ├── data_preprocessing.py # missing values, scaling, encoding
-│ ├── feature_selection.py # statistical tests & feature ranking
-│ ├── train_model.py # training & evaluation scripts
-│ └── evaluate_model.py # accuracy, precision, recall, ROC-AUC
-├── requirements.txt
-├── README.md
-└── results/
-├── feature_importance.png
-└── performance_report.txt
-
-
-
-## 🛠️ Getting Started
-
-### Prerequisites
+## Prerequisites
 - Python 3.8+
 - Install dependencies:
   ```bash
   pip install -r requirements.txt
 
-### Run the pipeline
+## Run the pipeline
+
 ### Preprocess data:
 python src/data_preprocessing.py --input data/raw_data.csv --output data/processed.csv
 
@@ -48,7 +27,7 @@ python src/feature_selection.py --data data/processed.csv --output data/selected
 ### Train and evaluate models:
 python src/train_model.py --data data/selected.csv --model random_forest
 python src/evaluate_model.py --data data/selected.csv --model random_forest
-### 📊 Results
+## 📊 Results
 The Random Forest model achieved:
 
 Accuracy: 83.48%
